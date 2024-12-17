@@ -13,81 +13,81 @@ export const users: User[] = [
     id: 1,
     name: 'Candice Schiner',
     company: 'Dell',
-    role: 'Frontend Developer',
+    role: 'Desenvolvedor Frontend',
     verified: false,
-    status: 'Active'
+    status: 'Ativo'
   },
   {
     id: 2,
     name: 'John Doe',
     company: 'TechCorp',
-    role: 'Backend Developer',
+    role: 'Desenvolvedor Backend',
     verified: true,
-    status: 'Active'
+    status: 'Ativo'
   },
   {
     id: 3,
     name: 'Alice Johnson',
     company: 'WebTech',
-    role: 'UI Designer',
+    role: 'Designer UI',
     verified: true,
-    status: 'Active'
+    status: 'Ativo'
   },
   {
     id: 4,
     name: 'David Smith',
     company: 'Innovate Inc.',
-    role: 'Fullstack Developer',
+    role: 'Desenvolvedor Fullstack',
     verified: false,
-    status: 'Inactive'
+    status: 'Inativo'
   },
   {
     id: 5,
     name: 'Emma Wilson',
     company: 'TechGuru',
-    role: 'Product Manager',
+    role: 'Gerente de Produto',
     verified: true,
-    status: 'Active'
+    status: 'Ativo'
   },
   {
     id: 6,
     name: 'James Brown',
     company: 'CodeGenius',
-    role: 'QA Engineer',
+    role: 'Engenheiro QA',
     verified: false,
-    status: 'Active'
+    status: 'Ativo'
   },
   {
     id: 7,
     name: 'Laura White',
     company: 'SoftWorks',
-    role: 'UX Designer',
+    role: 'Designer UX',
     verified: true,
-    status: 'Active'
+    status: 'Ativo'
   },
   {
     id: 8,
     name: 'Michael Lee',
     company: 'DevCraft',
-    role: 'DevOps Engineer',
+    role: 'Engenheiro DevOps',
     verified: false,
-    status: 'Active'
+    status: 'Ativo'
   },
   {
     id: 9,
     name: 'Olivia Green',
     company: 'WebSolutions',
-    role: 'Frontend Developer',
+    role: 'Desenvolvedor Frontend',
     verified: true,
-    status: 'Active'
+    status: 'Ativo'
   },
   {
     id: 10,
     name: 'Robert Taylor',
     company: 'DataTech',
-    role: 'Data Analyst',
+    role: 'Analista de Dados',
     verified: false,
-    status: 'Active'
+    status: 'Ativo'
   }
 ];
 
@@ -98,16 +98,16 @@ export type Employee = {
   email: string;
   phone: string;
   gender: string;
-  date_of_birth: string; // Consider using a proper date type if possible
+  date_of_birth: string;
   street: string;
   city: string;
   state: string;
   country: string;
   zipcode: string;
-  longitude?: number; // Optional field
-  latitude?: number; // Optional field
+  longitude?: number;
+  latitude?: number;
   job: string;
-  profile_picture?: string | null; // Profile picture can be a string (URL) or null (if no picture)
+  profile_picture?: string | null;
 };
 
 export type Product = {
@@ -123,44 +123,43 @@ export type Product = {
 
 export const navItems: NavItem[] = [
   {
-    title: 'Dashboard',
+    title: 'Painel',
     url: '/dashboard/overview',
     icon: 'dashboard',
     isActive: false,
     shortcut: ['d', 'd'],
-    items: [] // Empty array as there are no child items for Dashboard
+    items: []
   },
   {
-    title: 'Employee',
+    title: 'Membros',
     url: '/dashboard/employee',
     icon: 'user',
     shortcut: ['e', 'e'],
     isActive: false,
-    items: [] // No child items
+    items: []
   },
   {
-    title: 'Product',
+    title: 'Igrejas',
     url: '/dashboard/product',
     icon: 'product',
     shortcut: ['p', 'p'],
     isActive: false,
-    items: [] // No child items
+    items: []
   },
   {
-    title: 'Account',
-    url: '#', // Placeholder as there is no direct link for the parent
+    title: 'Conta',
+    url: '#',
     icon: 'billing',
     isActive: true,
-
     items: [
       {
-        title: 'Profile',
+        title: 'Perfil',
         url: '/dashboard/profile',
         icon: 'userPen',
         shortcut: ['m', 'm']
       },
       {
-        title: 'Login',
+        title: 'Entrar',
         shortcut: ['l', 'l'],
         url: '/',
         icon: 'login'
@@ -173,6 +172,6 @@ export const navItems: NavItem[] = [
     icon: 'kanban',
     shortcut: ['k', 'k'],
     isActive: false,
-    items: [] // No child items
+    items: []
   }
 ];

@@ -34,7 +34,7 @@ export function getMenuList(pathname: string): Group[] {
       menus: [
         {
           href: '/dashboard',
-          label: 'Dashboard',
+          label: 'Painel',
           active: pathname.includes('/dashboard'),
           icon: LayoutGrid,
           submenus: []
@@ -42,50 +42,50 @@ export function getMenuList(pathname: string): Group[] {
       ]
     },
     {
-      groupLabel: 'Contents',
+      groupLabel: 'Conteúdo',
       menus: [
         {
           href: '',
-          label: 'Posts',
+          label: 'Postagens',
           active: pathname.includes('/posts'),
           icon: SquarePen,
           submenus: [
             {
               href: '/posts',
-              label: 'All Posts'
+              label: 'Todas as Postagens'
             },
             {
               href: '/posts/new',
-              label: 'New Post'
+              label: 'Nova Postagem'
             }
           ]
         },
         {
           href: '/categories',
-          label: 'Categories',
+          label: 'Categorias',
           active: pathname.includes('/categories'),
           icon: Bookmark
         },
         {
           href: '/tags',
-          label: 'Tags',
+          label: 'Etiquetas',
           active: pathname.includes('/tags'),
           icon: Tag
         }
       ]
     },
     {
-      groupLabel: 'Settings',
+      groupLabel: 'Configurações',
       menus: [
         {
           href: '/users',
-          label: 'Users',
+          label: 'Usuários',
           active: pathname.includes('/users'),
           icon: Users
         },
         {
           href: '/account',
-          label: 'Account',
+          label: 'Conta',
           active: pathname.includes('/account'),
           icon: Settings
         }

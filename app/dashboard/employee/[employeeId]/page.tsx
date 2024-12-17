@@ -1,7 +1,7 @@
 import EmployeeViewPage from '../_components/employee-view-page';
 
 export const metadata = {
-  title: 'Dashboard : Employee View'
+  title: 'Dashboard : Visualizar Membro'
 };
 
 export default function Page() {

@@ -5,8 +5,8 @@ import { useQueryState } from 'nuqs';
 import { useCallback, useMemo } from 'react';
 
 export const GENDER_OPTIONS = [
-  { value: 'male', label: 'Male' },
-  { value: 'female', label: 'Female' }
+  { value: 'male', label: 'Masculino' },
+  { value: 'female', label: 'Feminino' }
 ];
 
 export function useEmployeeTableFilters() {
@@ -30,7 +30,6 @@ export function useEmployeeTableFilters() {
   const resetFilters = useCallback(() => {
     setSearchQuery(null);
     setGenderFilter(null);
-
     setPage(1);
   }, [setSearchQuery, setGenderFilter, setPage]);
 

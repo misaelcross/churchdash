@@ -2,24 +2,24 @@ import { fakeProducts, Product } from '@/constants/mock-api';
 import { notFound } from 'next/navigation';
 import ProductForm from './product-form';
 
-type TProductViewPageProps = {
+type TChurchViewPageProps = {
   productId: string;
 };
 
-export default async function ProductViewPage({
+export default async function ChurchViewPage({
   productId
-}: TProductViewPageProps) {
-  let product = null;
-  let pageTitle = 'Create New Product';
+}: TChurchViewPageProps) {
+  let church = null;
+  let pageTitle = 'Cadastrar Nova Igreja';
 
   if (productId !== 'new') {
     const data = await fakeProducts.getProductById(Number(productId));
-    product = data.product as Product;
-    if (!product) {
+    church = data.product as Product;
+    if (!church) {
       notFound();
     }
-    pageTitle = `Edit Product`;
+    pageTitle = `Editar Igreja`;
   }
 
-  return <ProductForm initialData={product} pageTitle={pageTitle} />;
+  return <ProductForm initialData={church} pageTitle={pageTitle} />;
 }

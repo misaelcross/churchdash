@@ -36,26 +36,26 @@ const ACCEPTED_IMAGE_TYPES = [
 const formSchema = z.object({
   image: z
     .any()
-    .refine((files) => files?.length == 1, 'Image is required.')
+    .refine((files) => files?.length == 1, 'Imagem é obrigatória.')
     .refine(
       (files) => files?.[0]?.size <= MAX_FILE_SIZE,
-      `Max file size is 5MB.`
+      `Tamanho máximo do arquivo é 5MB.`
     )
     .refine(
       (files) => ACCEPTED_IMAGE_TYPES.includes(files?.[0]?.type),
-      '.jpg, .jpeg, .png and .webp files are accepted.'
+      'Arquivos .jpg, .jpeg, .png e .webp são aceitos.'
     ),
   name: z.string().min(2, {
-    message: 'Product name must be at least 2 characters.'
+    message: 'Nome da igreja deve ter pelo menos 2 caracteres.'
   }),
   category: z.string(),
   price: z.number(),
   description: z.string().min(10, {
-    message: 'Description must be at least 10 characters.'
+    message: 'Endereço deve ter pelo menos 10 caracteres.'
   })
 });
 
-export default function ProductForm({
+export default function ChurchForm({
   initialData,
   pageTitle
 }: {
@@ -94,18 +94,13 @@ export default function ProductForm({
               render={({ field }) => (
                 <div className="space-y-6">
                   <FormItem className="w-full">
-                    <FormLabel>Images</FormLabel>
+                    <FormLabel>Imagens</FormLabel>
                     <FormControl>
                       <FileUploader
                         value={field.value}
                         onValueChange={field.onChange}
                         maxFiles={4}
                         maxSize={4 * 1024 * 1024}
-                        // disabled={loading}
-                        // progresses={progresses}
-                        // pass the onUpload function here for direct upload
-                        // onUpload={uploadFiles}
-                        // disabled={isUploading}
                       />
                     </FormControl>
                     <FormMessage />
@@ -120,9 +115,9 @@ export default function ProductForm({
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Product Name</FormLabel>
+                    <FormLabel>Nome da Igreja</FormLabel>
                     <FormControl>
-                      <Input placeholder="Enter product name" {...field} />
+                      <Input placeholder="Digite o nome da igreja" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -133,24 +128,24 @@ export default function ProductForm({
                 name="category"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Category</FormLabel>
+                    <FormLabel>Denominação</FormLabel>
                     <Select
                       onValueChange={(value) => field.onChange(value)}
                       value={field.value[field.value.length - 1]}
                     >
                       <FormControl>
                         <SelectTrigger>
-                          <SelectValue placeholder="Select categories" />
+                          <SelectValue placeholder="Selecione a denominação" />
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
-                        <SelectItem value="beauty">Beauty Products</SelectItem>
-                        <SelectItem value="electronics">Electronics</SelectItem>
-                        <SelectItem value="clothing">Clothing</SelectItem>
-                        <SelectItem value="home">Home & Garden</SelectItem>
-                        <SelectItem value="sports">
-                          Sports & Outdoors
+                        <SelectItem value="batista">Batista</SelectItem>
+                        <SelectItem value="catolica">Católica</SelectItem>
+                        <SelectItem value="evangelica">Evangélica</SelectItem>
+                        <SelectItem value="presbiteriana">
+                          Presbiteriana
                         </SelectItem>
+                        <SelectItem value="outra">Outra</SelectItem>
                       </SelectContent>
                     </Select>
                     <FormMessage />
@@ -162,12 +157,11 @@ export default function ProductForm({
                 name="price"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Price</FormLabel>
+                    <FormLabel>Número de Membros</FormLabel>
                     <FormControl>
                       <Input
                         type="number"
-                        step="0.01"
-                        placeholder="Enter price"
+                        placeholder="Digite o número de membros"
                         {...field}
                       />
                     </FormControl>
@@ -181,10 +175,10 @@ export default function ProductForm({
               name="description"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Description</FormLabel>
+                  <FormLabel>Endereço</FormLabel>
                   <FormControl>
                     <Textarea
-                      placeholder="Enter product description"
+                      placeholder="Digite o endereço completo da igreja"
                       className="resize-none"
                       {...field}
                     />
@@ -193,7 +187,7 @@ export default function ProductForm({
                 </FormItem>
               )}
             />
-            <Button type="submit">Add Product</Button>
+            <Button type="submit">Adicionar Igreja</Button>
           </form>
         </Form>
       </CardContent>

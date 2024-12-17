@@ -20,18 +20,18 @@ export default function OverViewPage() {
       <div className="space-y-2">
         <div className="flex items-center justify-between space-y-2">
           <h2 className="text-2xl font-bold tracking-tight">
-            Hi, Welcome back 👋
+            Olá, Bem-vindo de volta 👋
           </h2>
           <div className="hidden items-center space-x-2 md:flex">
             <CalendarDateRangePicker />
-            <Button>Download</Button>
+            <Button>Baixar</Button>
           </div>
         </div>
         <Tabs defaultValue="overview" className="space-y-4">
           <TabsList>
-            <TabsTrigger value="overview">Overview</TabsTrigger>
+            <TabsTrigger value="overview">Visão Geral</TabsTrigger>
             <TabsTrigger value="analytics" disabled>
-              Analytics
+              Análises
             </TabsTrigger>
           </TabsList>
           <TabsContent value="overview" className="space-y-4">
@@ -39,7 +39,7 @@ export default function OverViewPage() {
               <Card>
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                   <CardTitle className="text-sm font-medium">
-                    Total Revenue
+                    Receita Total
                   </CardTitle>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -55,16 +55,16 @@ export default function OverViewPage() {
                   </svg>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold">$45,231.89</div>
+                  <div className="text-2xl font-bold">R$ 45.231,89</div>
                   <p className="text-xs text-muted-foreground">
-                    +20.1% from last month
+                    +20,1% em relação ao mês passado
                   </p>
                 </CardContent>
               </Card>
               <Card>
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                   <CardTitle className="text-sm font-medium">
-                    Subscriptions
+                    Assinaturas
                   </CardTitle>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -82,15 +82,15 @@ export default function OverViewPage() {
                   </svg>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold">+2350</div>
+                  <div className="text-2xl font-bold">+2.350</div>
                   <p className="text-xs text-muted-foreground">
-                    +180.1% from last month
+                    +180,1% em relação ao mês passado
                   </p>
                 </CardContent>
               </Card>
               <Card>
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-sm font-medium">Sales</CardTitle>
+                  <CardTitle className="text-sm font-medium">Vendas</CardTitle>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -106,16 +106,16 @@ export default function OverViewPage() {
                   </svg>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-2xl font-bold">+12,234</div>
+                  <div className="text-2xl font-bold">+12.234</div>
                   <p className="text-xs text-muted-foreground">
-                    +19% from last month
+                    +19% em relação ao mês passado
                   </p>
                 </CardContent>
               </Card>
               <Card>
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                   <CardTitle className="text-sm font-medium">
-                    Active Now
+                    Ativos Agora
                   </CardTitle>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -133,7 +133,7 @@ export default function OverViewPage() {
                 <CardContent>
                   <div className="text-2xl font-bold">+573</div>
                   <p className="text-xs text-muted-foreground">
-                    +201 since last hour
+                    +201 desde a última hora
                   </p>
                 </CardContent>
               </Card>
@@ -144,9 +144,9 @@ export default function OverViewPage() {
               </div>
               <Card className="col-span-4 md:col-span-3">
                 <CardHeader>
-                  <CardTitle>Recent Sales</CardTitle>
+                  <CardTitle>Vendas Recentes</CardTitle>
                   <CardDescription>
-                    You made 265 sales this month.
+                    Você fez 265 vendas este mês.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>

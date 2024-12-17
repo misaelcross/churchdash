@@ -7,7 +7,7 @@ import { CellAction } from './cell-action';
 export const columns: ColumnDef<Product>[] = [
   {
     accessorKey: 'photo_url',
-    header: 'IMAGE',
+    header: 'FOTO',
     cell: ({ row }) => {
       return (
         <div className="relative aspect-square">
@@ -23,21 +23,20 @@ export const columns: ColumnDef<Product>[] = [
   },
   {
     accessorKey: 'name',
-    header: 'NAME'
+    header: 'NOME DA IGREJA'
   },
   {
     accessorKey: 'category',
-    header: 'CATEGORY'
+    header: 'DENOMINAÇÃO'
   },
   {
     accessorKey: 'price',
-    header: 'PRICE'
+    header: 'MEMBROS'
   },
   {
     accessorKey: 'description',
-    header: 'DESCRIPTION'
+    header: 'ENDEREÇO'
   },
-
   {
     id: 'actions',
     cell: ({ row }) => <CellAction data={row.original} />

@@ -36,15 +36,15 @@ export default async function EmployeeListingPage({}: TEmployeeListingPage) {
       <div className="space-y-4">
         <div className="flex items-start justify-between">
           <Heading
-            title={`Employee (${totalUsers})`}
-            description="Manage employees (Server side table functionalities.)"
+            title={`Membros (${totalUsers})`}
+            description="Gerenciar membros (Funcionalidades da tabela no lado do servidor.)"
           />
 
           <Link
             href={'/dashboard/employee/new'}
             className={cn(buttonVariants({ variant: 'default' }))}
           >
-            <Plus className="mr-2 h-4 w-4" /> Add New
+            <Plus className="mr-2 h-4 w-4" /> Adicionar Novo
           </Link>
         </div>
         <Separator />

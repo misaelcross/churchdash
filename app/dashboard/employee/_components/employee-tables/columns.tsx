@@ -11,14 +11,14 @@ export const columns: ColumnDef<Employee>[] = [
       <Checkbox
         checked={table.getIsAllPageRowsSelected()}
         onCheckedChange={(value) => table.toggleAllPageRowsSelected(!!value)}
-        aria-label="Select all"
+        aria-label="Selecionar todos"
       />
     ),
     cell: ({ row }) => (
       <Checkbox
         checked={row.getIsSelected()}
         onCheckedChange={(value) => row.toggleSelected(!!value)}
-        aria-label="Select row"
+        aria-label="Selecionar linha"
       />
     ),
     enableSorting: false,
@@ -26,23 +26,23 @@ export const columns: ColumnDef<Employee>[] = [
   },
   {
     accessorKey: 'first_name',
-    header: 'NAME'
+    header: 'NOME'
   },
   {
     accessorKey: 'country',
-    header: 'COUNTRY'
+    header: 'CIDADE'
   },
   {
     accessorKey: 'email',
-    header: 'EMAIL'
+    header: 'E-MAIL'
   },
   {
     accessorKey: 'job',
-    header: 'COMPANY'
+    header: 'MINISTÉRIO'
   },
   {
     accessorKey: 'gender',
-    header: 'GENDER'
+    header: 'GÊNERO'
   },
   {
     id: 'actions',
