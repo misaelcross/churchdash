@@ -131,6 +131,14 @@ export const navItems: NavItem[] = [
     items: []
   },
   {
+    title: 'Eventos',
+    url: '/dashboard/events',
+    icon: 'post',
+    isActive: false,
+    shortcut: ['e', 'v'],
+    items: []
+  },
+  {
     title: 'Painel',
     url: '/dashboard/overview',
     icon: 'dashboard',
