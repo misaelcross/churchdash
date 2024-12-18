@@ -123,6 +123,14 @@ export type Product = {
 
 export const navItems: NavItem[] = [
   {
+    title: 'Início',
+    url: '/dashboard/home',
+    icon: 'dashboard',
+    isActive: false,
+    shortcut: ['h', 'h'],
+    items: []
+  },
+  {
     title: 'Painel',
     url: '/dashboard/overview',
     icon: 'dashboard',

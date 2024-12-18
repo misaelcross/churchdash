@@ -5,7 +5,8 @@ import {
   Bookmark,
   SquarePen,
   LayoutGrid,
-  LucideIcon
+  LucideIcon,
+  Home
 } from 'lucide-react';
 
 type Submenu = {
@@ -32,6 +33,13 @@ export function getMenuList(pathname: string): Group[] {
     {
       groupLabel: '',
       menus: [
+        {
+          href: '/dashboard/home',
+          label: 'Início',
+          active: pathname.includes('/dashboard/home'),
+          icon: Home,
+          submenus: []
+        },
         {
           href: '/dashboard',
           label: 'Painel',
